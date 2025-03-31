@@ -97,7 +97,7 @@ This project is licensed under the **Apache License 2.0** — see the [LICENSE](
 
 If you use ZK-Audit in your work, please cite:
 
-> Minka T. (2025). *ZK-Audit: Zero-Knowledge Non-Repudiation for Privacy-Preserving and Tamper-Proof Audit Logs*. ICTO 2025 (forthcoming).
+> Minka Mi Nguidjoi. (2025). *ZK-Audit: Zero-Knowledge Non-Repudiation for Privacy-Preserving and Tamper-Proof Audit Logs*. ICTO 2025 (forthcoming).
 
 ---
 
@@ -105,4 +105,4 @@ If you use ZK-Audit in your work, please cite:
 
 **Thierry MINKA**  
 Expert judiciaire en cybercriminalité | Enseignant à l’ENSPY | Auditeur des finances publiques  
-For inquiries: `thierry.minka [at] example.com`
+For inquiries: minkathierry@gmail.com
