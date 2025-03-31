@@ -49,7 +49,7 @@ Full architecture and workflows are available in [`docs/architecture/`](./docs/a
 
 ```bash
 git clone https://github.com/<your-username>/zk-audit.git
-cd zk-audit
+cd Zk-Audit_Work
 pip install -r requirements.txt
 ```
 
@@ -105,4 +105,4 @@ If you use ZK-Audit in your work, please cite:
 
 **Thierry MINKA**  
 Expert judiciaire en cybercriminalité | Enseignant à l’ENSPY | Auditeur des finances publiques  
-For inquiries: minkathierry@gmail.com
+For inquiries: mail: minkathierry@gmail.com|WhatsApp: +237 621173780
