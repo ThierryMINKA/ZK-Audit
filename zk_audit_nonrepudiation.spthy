@@ -1,0 +1,48 @@
+// zk_audit_nonrepudiation.spthy
+// Tamarin model for non-repudiation in ZK-Audit
+
+theory ZKAudit_NonRepudiation
+
+begin
+
+// Built-in functions
+builtins: hashing, signing
+
+// Free functions
+functions:
+  hash/1
+  log/1
+  zkproof/1
+
+// Initial state
+rule Init:
+  []
+  -->
+  [ !LoggerInitialized ]
+
+// Log generation by Logger
+rule GenerateLog:
+  [ !LoggerInitialized, Fr(~data) ]
+  -->
+  [ Log(~data), Out(log(~data)) ]
+  // Logger generates and emits a log entry
+
+// Commitment and zk-STARK proof
+rule CommitProof:
+  [ Log(~data), Fr(~nonce) ]
+  -->
+  [ Commit(hash(<~data, ~nonce>)), Out(zkproof(hash(<~data, ~nonce>))) ]
+  // Log entry committed and proof generated
+
+// Proof verification by Verifier
+rule VerifyProof:
+  [ Commit(~h), Out(zkproof(~h)) ]
+  -->
+  [ Verified(~h) ]
+  // Verifier accepts a valid proof
+
+// Lemma: Every verified log must originate from a legitimate Logger
+lemma NonRepudiation:
+  "All h #i. Verified(h) ==> (Ex data nonce #j. Log(data) @j & h = hash(<data, nonce>))"
+
+end
