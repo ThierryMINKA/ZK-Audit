@@ -49,7 +49,7 @@ Full architecture and workflows are available in [`docs/architecture/`](./docs/a
 
 ```bash
 git clone https://github.com/<your-username>/zk-audit.git
-cd Zk-Audit_Work
+cd Zk-Audit
 pip install -r requirements.txt
 ```
 
